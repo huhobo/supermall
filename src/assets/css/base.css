@@ -1,51 +1,94 @@
 @import "normalize.css";
 
-:root{
-    --color-text:#666;
-    --color-high-text:#ff5777;
-    --color-tint:#ff8198;
-    --color-background: #fff;
-    --font-size:14px;
-    --line-height:1.5;
-}
-
-*,*::before,*::after{
-    margin: 0;
-    padding: 0;
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
-
-body{
-    font-family: 'Helvetica Neue',Helvetica,'PingFang SC','Hiragino Sans GB','Microsoft YaHei','微软雅黑',Arial,sans-serif;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
-    background: var(--color-background);
-    color: var(--color-text);
-    width: 100vm;
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-
-a{
-    color: var(--color-text);
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff;
+    color: #555;
+    font-size: 14px;
+    font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+    width: 100vm;/*body宽度等于视图大小*/
+    -webkit-tap-highlight-color: transparent;/*苹果浏览器设置点击高亮颜色*/
+    -webkit-font-smoothing: antialiased; /*chrome、safari抗锯齿*/
+    -moz-osx-font-smoothing: grayscale;/*firefox抗锯齿*/
+    user-select: none;/*用户不可选择*/
+}
+td, th, caption {
+    font-size: 14px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    font-size: 100%;
+}
+address, caption, cite, code, dfn, em, strong, th, var {
+    font-style: normal;
+    font-weight: normal;
+}
+a {
+    color: #555;
     text-decoration: none;
 }
-
-.clear-fix::after{
-    clear: both;
-    content: '';
-    display: block;
-    width: 0;
+a:hover {
+    text-decoration: underline;
+}
+img {
+    border: none;
+    vertical-align: middle;/*取消图片底侧有空白缝隙*/
+}
+ol, ul, li {
+    list-style: none;
+}
+input, textarea, select, button {
+    font: 14px "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
+}
+table {
+    border-collapse: collapse;
+}
+html {
+    overflow-y: scroll;
+}
+/*清除浮动*/
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: inline-block;
     height: 0;
+    clear: both;
     visibility: hidden;
 }
-
-.clear-fix{
-    zoom: 1;
+.clearfix {
+    *zoom: 1;
 }
 
-.left{
-    float: left;
+/*公共类*/
+.fl {
+    float: left
 }
-
-.right{
-    float: right;
+.fr {
+    float: right
+}
+.al {
+    text-align: left
+}
+.ac {
+    text-align: center
+}
+.ar {
+    text-align: right
+}
+.hide {
+    display: none
 }
