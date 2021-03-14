@@ -28,8 +28,8 @@
 </template>
 
 <script>
-    import TabBarItem from "../common/TabBarItem";
-    import TabBar from "../common/TabBar";
+    import TabBarItem from "../common/tabbar/TabBarItem";
+    import TabBar from "../common/tabbar/TabBar";
 
     export default {
         name: "MainTabBar",

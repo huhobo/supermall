@@ -15,19 +15,19 @@ const routes = [
   },
   {
     path: '/home',
-    component:()=>import('../views/home')
+    component:()=>import('../views/home/home')
   },
   {
     path: '/category',
-    component:()=>import('../views/category')
+    component:()=>import('../views/category/category')
   },
   {
     path: '/cart',
-    component:()=>import('../views/cart')
+    component:()=>import('../views/cart/cart')
   },
   {
     path: '/profile',
-    component:()=>import('../views/profile')
+    component:()=>import('../views/profile/profile')
   }
 ]
 
