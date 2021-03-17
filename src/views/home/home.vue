@@ -1,15 +1,20 @@
 <template>
-    <NavBar class="home-nav"><div slot="center">首页</div></NavBar>
+    <div>
+        <NavBar class="home-nav"><div slot="center">首页</div></NavBar>
+        <carrousel :banners="banners"></carrousel>
+    </div>
 </template>
 
 <script>
     import NavBar from "../../components/common/navbar/NavBar";
     import {getHomeMultidata} from "../../network/home";
+    import carrousel from "../../components/common/swiper/carrousel";
 
     export default {
         name: "home",
         components:{
-            NavBar
+            NavBar,
+            carrousel
         },
         data(){
           return{
