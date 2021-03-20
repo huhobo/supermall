@@ -1,5 +1,5 @@
 <template>
-    <tab-bar>
+    <tab-bar class="tabbar">
         <tab-bar-item path="/home">
             <img src="../../assets/img/tabbar/首页.svg" alt="" slot="item_icon">
             <img src="../../assets/img/tabbar/首页_active.svg" alt="" slot="item_icon_active">
@@ -41,5 +41,8 @@
 </script>
 
 <style scoped>
-
+    .tabbar{
+        background-color: #fff;
+        z-index:10;
+    }
 </style>
