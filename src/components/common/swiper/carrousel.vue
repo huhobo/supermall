@@ -22,13 +22,13 @@
                         disableOnInteraction:false,  //触摸、拖动后继续自动播放
                         delay:3000,
                     },
-                    effect:"cube",//3D转换特效
-                    cubeEffect:{
-                        sideshslideShadows: true,
+                    /*effect:"cube",//3D转换特效*/
+                   /* cubeEffect:{
+                        sideshslideShadows: false,
                         shadow: false,
                         shadowOffset: 100,
                         shadowScale: 0.6
-                    }
+                    }*/
                 }
             }
         },

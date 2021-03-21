@@ -1,11 +1,13 @@
 <template>
-    <div>
+    <div style="padding-top: 44px">
         <NavBar class="home-nav"><div slot="center">首页</div></NavBar>
-        <carrousel :banners="banners" style="margin-top: 44px"></carrousel>
-        <RecommendView :recommends="recommends"></RecommendView>
-        <feature></feature>
-        <tabcontrol :titles="['流行','新款','精选']" @clickindex="clickindex"></tabcontrol>
-        <GoodsList :goods="goods[currentCheck].list"></GoodsList>
+        <Scroll>
+            <carrousel :banners="banners"></carrousel>
+            <RecommendView :recommends="recommends"></RecommendView>
+            <feature></feature>
+            <tabcontrol :titles="['流行','新款','精选']" @clickindex="clickindex"></tabcontrol>
+            <GoodsList :goods="goods[currentCheck].list"></GoodsList>
+        </Scroll>
     </div>
 </template>
 
@@ -17,6 +19,7 @@
     import Feature from "./Feature";
     import tabcontrol from "../../components/content/tabcontrol";
     import GoodsList from "../../components/content/goods/GoodsList";
+    import Scroll from "../../components/common/scroll/Scroll";
 
     export default {
         name: "home",
@@ -26,7 +29,8 @@
             RecommendView,
             Feature,
             tabcontrol,
-            GoodsList
+            GoodsList,
+            Scroll,
         },
         data(){
           return{
@@ -37,7 +41,7 @@
                   'new':{page:0,list:[]},
                   'sell':{page:0,list:[]}
               },
-              currentCheck: 'pop'
+              currentCheck: 'pop',
           }
         },
         created() {
@@ -87,4 +91,8 @@
         top: 0;
         z-index: 10;
     }
+/*    .contents{
+        height: 100vh;
+        overflow: hidden;
+    }*/
 </style>
